@@ -1,0 +1,48 @@
+<div>
+    <app-navbar></app-navbar>
+ </div>
+
+<div class="container mt-5 " style="font-family: 'M PLUS Rounded 1c', sans-serif;
+            font-size: 20px;
+            font-weight: 300;">
+    <div  class=" col text-end"> 
+        <button class="btn btn-custom-hover  btn-large-text" type="button" [routerLink]="['/nuevo']"  >
+            <i class="fa-solid fa-circle-plus"></i>
+            agregar
+        </button>
+    </div>
+    
+
+  
+ <div class="col-12 mt-3  ">
+
+  <table class="table" >
+    <thead style="background-color: #493074ff;">
+        <tr class="text-center" >
+            
+            <th >Autores</th>
+            <th scope="col"> <i class="fa-solid fa-gears"></i>
+                opciones</th>
+        </tr>
+    </thead>
+    
+    <tbody  >
+        <tr  *ngFor="let autor of autores; let i = index">
+           
+            <td  class="text-center py-3">{{autor.nombre}}</td>
+            <td class="text-center ">
+                 <span class="badge text-bg-info p-3 m-2" 
+
+                 (click)="actualizarAut(autor.id)" >Actualizar <i class="fa-solid fa-pencil"></i></span>
+
+                <span style="margin: 0 5px;"></span>     
+                <span class="badge text-bg-danger p-3"
+                    (click)="elimnarAutor(autor, i)">Borrar 
+                       <i class="fas fa-trash"></i></span></td>
+        </tr>
+    </tbody>
+  </table>
+
+  
+</div>
+

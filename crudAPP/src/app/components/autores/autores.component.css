@@ -1,0 +1,26 @@
+.btn-custom-hover {
+    border-color:  #5518bf; /* Color del borde */
+    color: #5518bf; /* Color del texto */
+  }
+
+ 
+
+  .btn-custom-hover:hover {
+    background-color: #5518bf; /* Color de fondo al hacer hover */
+    color: aqua; /* Color del texto al hacer hover */
+  }
+  .table {
+    --bs-table-bg: rgba(75, 208, 232, 0.381);
+    border-radius: 10%;
+  }
+  tr th {
+    color: aqua;
+  }
+
+  .btn-large-text {
+   
+    font-family:  'M PLUS Rounded 1c', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    
+  }

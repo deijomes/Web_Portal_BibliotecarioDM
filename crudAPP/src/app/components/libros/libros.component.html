@@ -1,0 +1,32 @@
+<div>
+    <app-navbar></app-navbar>
+ </div>
+
+ <div class="container mt-5" style="font-family: 'M PLUS Rounded 1c', sans-serif; font-size: 20px; font-weight: 300;">
+    <div class="col text-end">
+      <button class="btn btn-danger-hover btn-large-text" type="button" [routerLink]="['/home']">
+        <i class="fa-solid fa-circle-plus"></i>
+        regresar
+      </button>
+    </div>
+  
+  
+
+    <div class="row row-cols-1 row-cols-md-4 g-4  mt-4"  >
+        <div class="col" *ngFor="let libro of  librod">
+          <div class="card h-100" style="max-width: 18rem; height: auto;">
+            <img [src]="libro.imagen" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{libro.titulo}}</h5>
+              <p class="card-text">{{libro.descripcion}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-body-secondary">{{libro.publicacion}}</small>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    
+</div>
+

@@ -1,0 +1,34 @@
+
+<div>
+  <app-navbar></app-navbar>
+</div>
+<div class="container col-6 mt-5 ">
+    <div  class=" col text-end"> 
+        <button class="btn btn-danger btn-danger-hover" type="button" [routerLink]="['/autores']">
+            <i class="fa-solid fa-arrow-left"></i>
+            regresar
+        </button>
+    </div>
+    
+    <form [formGroup]="autorForma " (ngSubmit)="guardar()" >
+        <div class="mb-5 row mt-4">
+          
+          <div class="col">
+            <input id="nombre"
+             class="form-control" type="text"
+             formControlName="nombre"
+             placeholder="Nombre">
+          </div>
+        </div>
+      
+        <div class="mb-3 row mt-5">
+            <div class="col-12 d-flex justify-content-center ">
+              <button type="submit" class="btn btn-outline-info w-40">
+                Guardar
+              </button>
+            </div>
+          </div>
+      </form>
+</div>
+
+

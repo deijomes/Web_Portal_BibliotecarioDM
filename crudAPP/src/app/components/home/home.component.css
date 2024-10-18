@@ -1,0 +1,505 @@
+header{
+    height: 700px;
+    width: 100%;
+    position: relative;
+    background: #8d2de2b2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4b00e06e, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4b00e069, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    
+}
+
+.menu-header{
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: beige;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transition: transform .5s;
+    z-index: 20;
+    animation: escalar .5s 3 alternate;
+
+}
+
+.header-enlaces {
+    position: fixed; /* Fija el elemento a la pantalla */
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 10% 50%); /* Forma más precisa */
+    transition: clip-path 0.5s ease-in-out; /* Animación suave para el cambio de forma */
+
+    width: 15%; /* Puedes ajustar este valor según el tamaño que quieras */
+    height: 70px;
+
+    background: rgba(45, 178, 226, 0.88);  /* Color con opacidad ligera */
+  
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Sombra ajustada para que no sea tan intensa */
+  
+    right: 0; /* Posiciona el menú en el borde derecho */
+    top: 10%;  /* Lo alinea en la parte superior de la pantalla */
+    
+    z-index: 10; /* Asegura que esté encima de otros elementos */
+   
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+   
+    
+}
+
+.header-enlaces a{
+    text-decoration: none;
+    color: rgb(4, 1, 1);
+      font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+.header-enlaces a:hover {
+    text-decoration: underline !important; /* Debería aplicar subrayado al pasar el ratón */
+    color: #ed12b365;
+    font-weight:bolder;
+}
+
+
+.clip-original {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 92%, 100% 50%);
+   
+}
+
+
+.contenedor{
+    padding: 50px 0;
+    max-width: 1000px;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3+p{
+    color: #774c4c;
+    text-align: center;
+}
+
+.menu-header:active{
+    transform: scale(0.8);
+}
+@keyframes escalar {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contenido-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+.contenido-header .textos-header{
+    transform: translateY(0);
+    opacity: 0;
+    animation: animacion2 1s ease-out forwards;
+    width: 50%;
+
+}
+
+.contenido-header h1{
+    color: rgb(255, 255, 255);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+}
+.contenido-header h2{
+    color: rgb(255, 255, 255);
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    
+    font-weight: 300;
+}
+
+.textos-header>a{
+    display: inline-block;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 300;
+    margin-top: 20px;
+    padding: 5px 2px;
+    width: 80px;
+    text-align: center;
+}
+
+.contenido-header .img-header{
+    width: 50%;
+}
+
+.img-header img{
+    transform: translateX(0);
+    opacity: 0;
+    animation: animacion1 1s ease-out forwards;
+    width: 100%;
+}
+
+@keyframes animacion1 {
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes animacion2 {
+    0%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.wave-botton{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    height: 5px;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+
+.acerca-de {
+    padding-top: 20px;
+}
+
+.contenedor-acerde-de{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 80px 20px;
+    gap: 30px
+    
+}
+.acerca-de h3{
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.card-acerca{
+    background: #f2f2f2;
+    width: 30%;
+    border-radius: 5px;
+    padding: 20px 10px;
+    cursor: pointer;
+}
+
+.card-acerca i{
+    display: block;
+    font-size: 100px;
+    color: #4b00e0a8;
+    margin-bottom: 15px;
+}
+
+.card-acerca h4{
+    margin-bottom: 10px;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.card-acerca p{
+    font-size: 200;
+    margin-bottom: 10px;
+    color: #585858;
+}
+
+
+
+
+
+
+
+
+
+.galeria{
+    margin-top: 40px;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.galeria h3{
+  
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.galeria-img{
+    position: relative;
+    overflow: hidden;
+    width: 32%;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+}
+
+.galeria-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    vertical-align: top;
+    transform: scale(1);
+    transition: transform 0.6s;
+   
+}
+
+.galeria-img img:hover{
+    transform: scale(1.3);
+}
+
+
+.extra-galeria{
+    position: absolute;
+    color: white;
+    top: 0;
+    background: #8d2de240;
+    width: 100%;
+    height: 100%;
+    transform: translate(100%);
+    transition: transform 0.6s;
+    
+}
+.galeria-img:hover .extra-galeria{
+    transform: translate(0);
+}
+
+
+.extra-galeria p{
+    margin: 40px auto;
+    width: 95%;
+    font-weight: 300;
+    text-align: justify;
+}
+
+
+
+.slider-contenedor {
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    padding-top: 25px;
+    overflow: hidden;
+    position: relative; /* Asegúrate de que el contenedor sea relativo */
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    transition: transform 1.5s ease; /* Transición suave */
+    will-change: transform; /* Ayuda a optimizar la animación */
+}
+
+.cont-slider {
+    flex-shrink: 0;
+    width: 100%; /* Ajusta según tu diseño */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido */
+    flex-direction: column;
+}
+
+.cont-slider img {
+    vertical-align: top;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.cont-slider p {
+    font-style: italic;
+    font-weight: 300;
+    color: #585858;
+    width: 90%;
+    text-align: center;
+}
+
+.cont-slider h4 {
+    color: #585858;
+    font-style: italic;
+    font-weight: 300;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    margin-top: 10px;
+}
+
+
+footer{
+   
+
+    padding: 20px 80px;
+    display: flex;
+    justify-content: left;
+   
+    margin: auto;
+    background: #8d2de2b2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4b00e06e, #8E2DE2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4b00e069, #8E2DE2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+footer h6{
+    color:   black;
+    font-style: italic;
+    font-weight: 400;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+footer P{
+    color:   black;
+    font-style: italic;
+    font-weight: 400;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.footer-contact i{
+ font-size: 25px;
+ padding: 9px;
+ width: 40px;
+ height: 40px;
+ text-align: center;
+ background: #2db2e2b6;
+ border-radius: 100%;
+ margin: 2px 7px 0 0;
+ box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75);
+ cursor: pointer;
+ 
+}
+
+@media screen and (max-width:800px) {
+
+    header{
+        width: auto;
+    }
+
+    .header-enlaces{
+        width: 30%;
+        height: 50px;
+        justify-content: space-around;
+       
+    }
+
+    .header-enlaces a{
+        font-size: 0px;
+        font-weight: 300;
+       
+        
+    }
+
+    .contenido-header{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        width: 100%;
+       
+       
+    }
+
+    .contenido-header .textos-header{
+        
+       
+        width: 80%;
+        margin-bottom: 100px;
+        text-align: center;
+    
+    }
+    .contenido-header h1{
+        font-size: 40px;
+    }
+
+    .contenido-header .img-header{
+       margin-top: 40px;
+       margin-bottom: 20px;
+    }
+
+    .card-acerca{
+        height: 70%;
+        width: 100%;
+    }
+
+    .galeria{
+        
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        
+       
+    }
+
+    .galeria-img{
+        
+        width: 80%;
+        
+       
+    }
+
+    footer{
+   
+
+        display: flex;
+        justify-content: center;
+       
+        margin: auto;
+        
+    }
+
+    footer h6{
+        text-align: center;
+    }
+
+    
+
+    
+
+    
+    
+}

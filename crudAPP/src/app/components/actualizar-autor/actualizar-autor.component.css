@@ -1,0 +1,13 @@
+.btn-danger-hover {
+    border-color: #5518bf; /* Color del borde */
+    color: #5518bf; /* Color del texto */
+    background-color: transparent; /* Fondo inicial transparente o el color deseado */
+    font-family:  'M PLUS Rounded 1c', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btn-danger-hover:hover {
+    background-color: #5518bf; /* Color de fondo al hacer hover */
+    color: aqua; /* Color del texto al hacer hover */
+}

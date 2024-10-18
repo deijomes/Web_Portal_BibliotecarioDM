@@ -1,0 +1,91 @@
+<header>
+<nav>
+    <div class="menu-header" >
+        <i class="fa-solid fa-bars" (click)="toggleMenu()"></i>
+    </div>
+    <div class="header-enlaces"  id="enlaces" [ngClass]="{ 'clip-original': !menuAbierto }">
+        <a href="#">ayuda</a>
+        <a href="#">ver oeso</a>
+    </div>
+</nav>
+<div class="contenido-header">
+    <div class="textos-header">
+        <h1> Bienvenido a tu portal bibliotecario</h1>
+        <h2> tu biblioteca ideal- DM </h2>
+        <a href="#"> ver mas</a>
+    </div>
+    <div class="img-header">
+        <img src="img/undraw_education_f8ru (1).svg" alt="">
+    </div>
+</div>
+<div style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-78.78,58.56 C181.94,196.35 276.75,-83.17 522.80,50.68 L500.00,149.60 L-0.00,149.60 Z" style="stroke: none; fill: #fff;"></path></svg></div>
+</header>
+<main>
+    <section class="acerca-de contenedor">
+        <h3>Explora nuestros servicios</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus quos quis quod provident unde, doloremque et corrupti. Eius odio maxime molestias nisi delectus? Ducimus, perspiciatis ab sit laboriosam eum optio?</p>
+         <div class="contenedor-acerde-de">
+            <div  [routerLink]="['/autores']" routerLinkActive="router-link-active" class="card-acerca">
+                <i class="fa-solid fa-users"></i>
+                <h4>Registro autor</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus eius esse consequatur voluptas beatae, architecto ab ducimus, in odio hic suscipit vel explicabo totam excepturi incidunt voluptate odit necessitatibus?</p>
+            </div>
+            <div [routerLink]="['/libros']" routerLinkActive="router-link-active" class="card-acerca">
+                <i class="fa-solid fa-layer-group"></i>
+                <h4>Libros</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus eius esse consequatur voluptas beatae, architecto ab ducimus, in odio hic suscipit vel explicabo totam excepturi incidunt voluptate odit necessitatibus?</p>
+            </div>
+         </div>
+    </section>
+    <section class="galeria contenedor ">
+        <div class="galeria-texto">
+            <h3>Conoce nuestros tipos de libros</h3>
+            
+        </div>
+        <article class="galeria"></article>
+        <div   class="galeria-img">
+            <img src="img/giammarco-boscaro-zeH-ljawHtg-unsplash.jpg" alt="">
+            <div class="extra-galeria">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum delectus quidem blanditiis in hic ducimus, temporibus illo, nemo iusto qui vero dolore nam adipisci dolores voluptate praesentium enim ad dicta!</p>
+            </div>
+           
+        </div>
+        <div class="galeria-img">
+            <img src="img/henry-be-lc7xcWebECc-unsplash.jpg" alt="">
+            <div class="extra-galeria">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum delectus quidem blanditiis in hic ducimus, temporibus illo, nemo iusto qui vero dolore nam adipisci dolores voluptate praesentium enim ad dicta!</p>
+            </div>
+            
+        </div>
+        <div class="galeria-img">
+            <img src="img/jaredd-craig-HH4WBGNyltc-unsplash.jpg" alt="">
+            <div class="extra-galeria">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum delectus quidem blanditiis in hic ducimus, temporibus illo, nemo iusto qui vero dolore nam adipisci dolores voluptate praesentium enim ad dicta!</p>
+            </div>
+         
+        </div>
+    </section>
+    <div class="slider-contenedor">
+        <section class="slider" [ngStyle]="{ transform: getSliderTransform() }">
+    <div class="cont-slider" *ngFor="let libro of librodb">
+      <p>{{ libro.descripcion }}</p>
+      <img [src]="libro.imagen" alt="{{ libro.titulo }}">
+      <h4>{{ libro.titulo }}</h4>
+    </div>
+  </section>
+    </div>
+</main>
+<footer>
+    <div class="footer-contact">
+        <h6>Info</h6>
+        <p>BiblioDM&#64;gmail.com</p>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        
+
+    </div>
+    <div class="footer-logo">
+        <img src="" alt="">
+    </div>
+</footer>
